@@ -1,0 +1,67 @@
+@import "../constants.scss";
+
+.Editor {
+  width: 100%;
+  height: 100vh;
+  &__main {
+    height: 100vh;
+    position: relative;
+    -webkit-box-shadow: 10px 0px 13px -8px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 10px 0px 13px -8px rgba(0, 0, 0, 0.12);
+    box-shadow: 10px 0px 13px -8px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+  }
+  &__header {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba($gray, 0.3);
+  }
+  &__wrapper {
+    padding-top: 30px;
+    background: $shaded-white;
+  }
+  &__actions {
+    background: $lightest-gray;
+    height: 100vh;
+  }
+  &__docname {
+    width: 100%;
+    height: 60px;
+    border: 0;
+    font-size: 40px;
+    color: gray;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: rgba($gray, 0.7);
+    }
+  }
+}
+.EditorTool {
+  &__toolbar {
+    border: 0 !important;
+    background: transparent !important;
+    .rdw-option-wrapper,
+    .rdw-dropdown-wrapper {
+      background: transparent !important;
+      color: $gray !important;
+      border: 0;
+      &:focus,
+      &:hover,
+      &:active {
+        box-shadow: none !important;
+      }
+    }
+    .rdw-option-active {
+      border: 1px solid $primary;
+    }
+  }
+  .rdw-embedded-modal {
+    height: 230px !important;
+    width: 250px !important;
+    box-shadow: 0px 0px 8px rgba($black, 0.12);
+  }
+}
